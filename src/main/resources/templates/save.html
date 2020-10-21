@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión personas</title>
+    <link href="../static/css/bootstrap-grid.min.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" th:action="@{/save}" th:object="${persona}" method="POST">
+            <div>
+                <input type="hidden" id="id" th:field="*{id}" />
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-controll" id="nombre" th:field="*{nombre}" name="nombre">
+                <label for="apellido">Apellido</label>
+                <input type="text" class="form-controll" id="apellido" th:field="*{apellido}" name="apellido">
+                <label for="direccion">Dirección</label>
+                <input type="text" class="form-controll" id="direccion" th:field="*{direccion}" name="direccion">
+                <label for="telefono">Teléfono</label>
+                <input type="text" class="form-controll" id="telefono" th:field="*{telefono}" name="telefono">
+            </div>
+            <button type="submit" class="btn">Guardar</button>
+        </form>
+    </div>
+</body>
+
+</html>

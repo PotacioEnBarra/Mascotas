@@ -1,10 +1,10 @@
-package co.edu.konrad.crudmascotas;
+package co.edu.konrad.crudusuarios;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CrudmascotasApplicationTests {
+class CrudusuariosApplicationTests {
 
 	@Test
 	void contextLoads() {

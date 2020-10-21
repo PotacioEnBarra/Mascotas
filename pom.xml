@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>co.edu.konrad</groupId>
-	<artifactId>crudmascotas</artifactId>
+	<artifactId>crudusuarios</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>crudmascotas</name>
-	<description>Crud para la gestion de mascotas</description>
+	<name>crudusuarios</name>
+	<description>CRUD para la gestion de usuarios</description>
 
 	<properties>
 		<java.version>11</java.version>
@@ -40,8 +40,8 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>com.microsoft.sqlserver</groupId>
-			<artifactId>mssql-jdbc</artifactId>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
