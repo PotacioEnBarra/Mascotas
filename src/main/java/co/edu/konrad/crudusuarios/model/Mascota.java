@@ -19,10 +19,10 @@ public class Mascota{
     private String nombre;
 
     @Column
-    private String dueño;
+    private String propietario;
 
     @Column
-    private String tipoAnimal;
+    private String tipo_animal;
 
     @Column
     private String raza;
@@ -50,21 +50,8 @@ public class Mascota{
     public String getNombre() {
         return nombre;
     }
-    
-    /**
-     * @return String return the dueño
-     */
-    public String getDueño() {
-        return dueño;
-    }
    
-    /**
-     * @return String return the tipoAnimal
-     */
-    public String getTipoAnimal() {
-        return tipoAnimal;
-    }
- 
+   
     /**
      * @return String return the raza
      */
@@ -108,20 +95,6 @@ public class Mascota{
     }
 
     /**
-     * @param dueño the dueño to set
-     */
-    public void setDueño(String dueño) {
-        this.dueño = dueño;
-    }
-
-    /**
-     * @param tipoAnimal the tipoAnimal to set
-     */
-    public void setTipoAnimal(String tipoAnimal) {
-        this.tipoAnimal = tipoAnimal;
-    }
-
-    /**
      * @param raza the raza to set
      */
     public void setRaza(String raza) {
@@ -147,6 +120,35 @@ public class Mascota{
      */
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+
+    /**
+     * @return String return the propietario
+     */
+    public String getPropietario() {
+        return propietario;
+    }
+
+    /**
+     * @param propietario the propietario to set
+     */
+    public void setPropietario(String propietario) {
+        this.propietario = propietario;
+    }
+
+    /**
+     * @return String return the tipo_animal
+     */
+    public String getTipo_animal() {
+        return tipo_animal;
+    }
+
+    /**
+     * @param tipo_animal the tipo_animal to set
+     */
+    public void setTipo_animal(String tipo_animal) {
+        this.tipo_animal = tipo_animal;
     }
 
 }

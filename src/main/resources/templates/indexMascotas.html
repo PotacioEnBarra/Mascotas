@@ -12,7 +12,7 @@
     <div class="container">
         <br>
         <div>
-            <a href="/saveMascotas/0" class="btn btn-primary">Nuevo</a>
+            <a href="inicio_mascota/save/0" class="btn btn-primary">Nuevo</a>
         </div>
         <h2 th:if="${list.isEmpty()}">Aún no hay registros</h2>
         <div th:if="${!list.isEmpty()}">
@@ -21,7 +21,7 @@
                 <thead>
                     <tr>
                         <th>Nombre</th>
-                        <th>Dueño</th>
+                        <th>Propietario</th>
                         <th>TipoAnimal</th>
                         <th>Raza</th>
                         <th>Edad</th>
@@ -34,16 +34,16 @@
                 <tbody>
                     <tr th:each="Mascota : ${list}">
                         <td th:text="${Mascota.nombre}"></td>
-                        <td th:text="${Mascota.dueño}"></td>
-                        <td th:text="${Mascota.tipoAnimal}"></td>
+                        <td th:text="${Mascota.propietario}"></td>
+                        <td th:text="${Mascota.tipo_animal}"></td>
                         <td th:text="${Mascota.raza}"></td>
                         <td th:text="${Mascota.edad}"></td>
                         <td th:text="${Mascota.direccion}"></td>
                         <td th:text="${Mascota.telefono}"></td>
 
                         <td>
-                            <a th:href="@{/delete/{id}(id=${Mascota.id})}">Eliminar</a>
-                            <a th:href="@{/saveMascotas/{id}(id=${Mascota.id})}">Editar</a>
+                            <a th:href="@{/inicio_mascota/delete/{id}(id=${Mascota.id})}">Eliminar</a>
+                            <a th:href="@{/inicio_mascota/save/{id}(id=${Mascota.id})}">Editar</a>
                         </td>
                     </tr>
                 </tbody>

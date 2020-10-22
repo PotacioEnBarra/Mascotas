@@ -19,7 +19,7 @@ public class MascotaController {
    @RequestMapping("/inicio_mascota")
     public String index(Model model){
         model.addAttribute("list", MascotaServiceAPI.getAll());
-        return "indexMascota";
+        return "indexMascotas";
     } 
     @GetMapping("/inicio_mascota/save/{id}")
     public String viewSave(@PathVariable("id") Long id, Model model){
