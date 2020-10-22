@@ -11,22 +11,39 @@
 <body>
     <div class="container">
         <form action="#" th:action="@{/inicio_mascota/save}" th:object="${mascota}" method="POST">
-            <div class="form-group">
-                <input type="hidden" id="id" th:field="*{id}" />
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" th:field="*{nombre}" name="nombre">
-                <label for="propietario">Dueño</label>
-                <input type="text" class="form-control" id="propietario" th:field="*{propietario}" name="propietario">
-                <label for="tipo_animal">Tipo de Animal</label>
-                <input type="text" class="form-control" id="tipo_animal" th:field="*{tipo_animal}" name="tipo_animal">
-                <label for="raza">Raza</label>
-                <input type="text" class="form-control" id="raza" th:field="*{raza}" name="raza">
-                <label for="edad">Edad</label>
-                <input type="number" class="form-control" id="edad" th:field="*{edad}" name="edad">
-                <label for="direccion">Direccion</label>
-                <input type="text" class="form-control" id="direccion" th:field="*{direccion}" name="direccion">
-                <label for="telefono">Telefono</label>
-                <input type="text" class="form-control" id="telefono" th:field="*{telefono}" name="telefono">
+            <input type="hidden" id="id" th:field="*{id}" />
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" th:field="*{nombre}" name="nombre">
+                </div>
+                <div class="col-md-4">
+                    <label for="propietario">Dueño</label>
+                    <input type="text" class="form-control" id="propietario" th:field="*{propietario}" name="propietario">
+                </div>
+                <div class="col-md-4">
+                    <label for="tipo_animal">Tipo de Animal</label>
+                    <input type="text" class="form-control" id="tipo_animal" th:field="*{tipo_animal}" name="tipo_animal">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="raza">Raza</label>
+                    <input type="text" class="form-control" id="raza" th:field="*{raza}" name="raza">
+                </div>
+
+                <div class="col-md-3">
+                    <label for="edad">Edad</label>
+                    <input type="number" class="form-control" id="edad" th:field="*{edad}" name="edad">
+                </div>
+                <div class="col-md-3">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" class="form-control" id="direccion" th:field="*{direccion}" name="direccion">
+                </div>
+                <div class="col-md-3">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" class="form-control" id="telefono" th:field="*{telefono}" name="telefono">
+                </div>
             </div>
             <button type="submit" class="btn btn-primary">Guardar</button>
         </form>
