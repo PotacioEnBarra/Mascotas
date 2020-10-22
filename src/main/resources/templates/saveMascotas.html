@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Mascotas</title>
+    <link href="../static/css/bootstrap-grid.min.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" th:action="@{/saveMascotas}" th:object="${Mascota}" method="POST">
+            <div class="form-group">
+                <input type="hidden" id="id" th:field="*{id}" />
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-controll" id="nombre" th:field="*{nombre}" name="nombre">
+                <label for="dueño">Dueño</label>
+                <input type="text" class="form-controll" id="dueño" th:field="*{dueño}" name="dueño">
+                <label for="tipoAnimal">TipoAnimal</label>
+                <input type="text" class="form-controll" id="tipoAnimal" th:field="*{tipoAnimal}" name="tipoAnimal">
+                <label for="raza">Raza</label>
+                <input type="text" class="form-controll" id="raza" th:field="*{raza}" name="raza">
+                <label for="edad">Edad</label>
+                <input type="text" class="form-controll" id="edad" th:field="*{edad}" name="edad">
+                <label for="direccion">Direccion</label>
+                <input type="text" class="form-controll" id="direccion" th:field="*{direccion}" name="direccion">
+                <label for="telefono">Telefono</label>
+                <input type="text" class="form-controll" id="telefono" th:field="*{telefono}" name="telefono">
+            </div>
+            <button type="submit" class="btn">Guardar</button>
+        </form>
+    </div>
+</body>
+
+</html>
